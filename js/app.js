@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.box3').append('<input type="text" class="s1" maxlength="1" >');
 
     $('#reset_button').on('click', function() {
-        $('input.s1').val('');
+        $('input[type=text]').val('');
     });
 
     $('#files').on('change', function() {
