@@ -18,22 +18,32 @@ $(document).ready(function () {
     $('#save_button').on('click', function(){
         if ($('#filename').text() != 'untitled') {
             save_data($('#filename').text(), get_data());
+            alert('Data saved');
         } else {
             $('#save_as_button').click();
+        }
+    });
+
+    $('#delete_button').on('click', function(){
+        var filename = $('#filename').text();
+        if (filename != 'untitled') {
+            if(confirm('Are you sure you want to delete '+filename)) {
+                delete_file(filename);
+            }
         }
     });
 
     $('#save_as_button').on('click', function(){
         filename = prompt("Enter file name");
 
-        if (validate_filename(filename)){
+        if (validate_filename(filename) && (filename !== null)){
             if (!save_new(filename)) {
                 alert('File name already exists. Pick a different file name.');
             } else {
                 $('#filename').html(filename);
             }
         } else {
-            alert('Invalid filename');
+            alert('Invalid filename. Alphanumeric only. No spaces and dashes.');
         }
     });
 
@@ -144,7 +154,10 @@ function delete_file(filename){
     const index = files.indexOf(filename);
     if (index > -1) {
       files.splice(index, 1);
-      localStorage.remove(filename);
+      localStorage.setItem('files', JSON.stringify(files));
+      localStorage.removeItem(filename);
+      load_file_select();
+      $('#new_button').click();
       return true;
     }
     return false;
@@ -156,7 +169,7 @@ function save_files(files){
 
 function load_file_select(){
     var all_files = get_files();
-    $('#files').html('');
+    $('#files').html('<option value="">[--- select saved file ---]</option>');
     for(var i in all_files) {
         $('#files').append('<option value="'+all_files[i]+'">'+all_files[i]+'</option>');
     }    
