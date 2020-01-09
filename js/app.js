@@ -1,21 +1,21 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     $('.box').append('<input type="text" class="s1" maxlength="1" >');
     $('.box2').append('<input type="text" class="s1" maxlength="1" >');
     $('.box3').append('<input type="text" class="s1" maxlength="1" >');
 
-    $('#reset_button').on('click',function(){
+    $('#reset_button').on('click', function() {
         $('input.s1').val('');
     });
 
-    $('#files').on('change', function(){
+    $('#files').on('change', function() {
         if ($(this).val() != "") {
             load_data($(this).val());
             $('#filename').html($(this).val());
         }
     });
 
-    $('#save_button').on('click', function(){
+    $('#save_button').on('click', function() {
         if ($('#filename').text() != 'untitled') {
             save_data($('#filename').text(), get_data());
             alert('Data saved');
@@ -24,19 +24,19 @@ $(document).ready(function () {
         }
     });
 
-    $('#delete_button').on('click', function(){
+    $('#delete_button').on('click', function() {
         var filename = $('#filename').text();
         if (filename != 'untitled') {
-            if(confirm('Are you sure you want to delete '+filename)) {
+            if (confirm('Are you sure you want to delete ' + filename)) {
                 delete_file(filename);
             }
         }
     });
 
-    $('#save_as_button').on('click', function(){
+    $('#save_as_button').on('click', function() {
         filename = prompt("Enter file name");
 
-        if (validate_filename(filename) && (filename !== null)){
+        if (validate_filename(filename) && (filename !== null)) {
             if (!save_new(filename)) {
                 alert('File name already exists. Pick a different file name.');
             } else {
@@ -47,7 +47,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#new_button').on('click', function(){
+    $('#new_button').on('click', function() {
         $('#filename').html('untitled');
         $('input[type=text]').val('');
         $('#files').val('');
@@ -55,12 +55,12 @@ $(document).ready(function () {
 
     load_file_select();
 
-    $('#reset_button').on('click', function () {
+    $('#reset_button').on('click', function() {
         $('input').val('');
 
-    });    
+    });
 
-    $('body').on('input keypress', 'input.s1', function (e) {
+    $('body').on('input keypress', 'input.s1', function(e) {
 
         var $this = $(this);
         var $next_input;
@@ -82,12 +82,12 @@ $(document).ready(function () {
                 $next_input = $this.parent().parent().parent().parent().next().find('input:first');
             }
 
-            if(e.currentTarget.value.length >= 1) {
+            if (e.currentTarget.value.length >= 1) {
                 $next_input.focus().select();
             }
-        } 
+        }
 
-    }).on('keydown', 'input.s1', function(e){
+    }).on('keydown', 'input.s1', function(e) {
 
         var $this = $(this);
         var $next_input;
@@ -110,16 +110,16 @@ $(document).ready(function () {
             } else if ($this.parent().parent().parent().parent().prev().find('input:last').length) {
                 $next_input = $this.parent().parent().parent().parent().prev().find('input:last');
             }
-            $next_input.focus();//.select();
-        } 
+            $next_input.focus(); //.select();
+        }
     });
 
 });
 
-function get_data(){
+function get_data() {
     var data = [];
-    $('input[type=text]').each(function(){
-        data.push( $(this).val());
+    $('input[type=text]').each(function() {
+        data.push($(this).val());
     });
     return data;
 }
@@ -128,7 +128,7 @@ function save_data(filename, data) {
     localStorage.setItem(filename, JSON.stringify(data));
 }
 
-function load_data(filename){
+function load_data(filename) {
     data = localStorage.getItem(filename);
     console.log(data);
 
@@ -136,43 +136,44 @@ function load_data(filename){
         d = JSON.parse(data);
         console.log(d);
         var c = 0;
-        $('input[type=text]').each(function(){
-            $(this).val(d[c]); c++;
+        $('input[type=text]').each(function() {
+            $(this).val(d[c]);
+            c++;
         });
 
     }
 }
 
-function get_files(){
+function get_files() {
     var files = localStorage.getItem('files');
     if (files == null) return [];
     return JSON.parse(files);
 }
 
-function delete_file(filename){
+function delete_file(filename) {
     var files = get_files();
     const index = files.indexOf(filename);
     if (index > -1) {
-      files.splice(index, 1);
-      localStorage.setItem('files', JSON.stringify(files));
-      localStorage.removeItem(filename);
-      load_file_select();
-      $('#new_button').click();
-      return true;
+        files.splice(index, 1);
+        localStorage.setItem('files', JSON.stringify(files));
+        localStorage.removeItem(filename);
+        load_file_select();
+        $('#new_button').click();
+        return true;
     }
     return false;
 }
 
-function save_files(files){
+function save_files(files) {
     localStorage.setItem('files', JSON.stringify(files));
 }
 
-function load_file_select(){
+function load_file_select() {
     var all_files = get_files();
     $('#files').html('<option value="">[--- select saved file ---]</option>');
-    for(var i in all_files) {
-        $('#files').append('<option value="'+all_files[i]+'">'+all_files[i]+'</option>');
-    }    
+    for (var i in all_files) {
+        $('#files').append('<option value="' + all_files[i] + '">' + all_files[i] + '</option>');
+    }
 }
 
 function save_new(filename) {
@@ -181,16 +182,15 @@ function save_new(filename) {
     if (index < 0) {
         files.push(filename);
         save_files(files)
-        load_file_select();        
+        load_file_select();
         data = get_data();
         save_data(filename, data);
         return true;
-    }    
+    }
     return false;
 }
 
-function validate_filename(filename)
-{
-  var filename_regex = /^[0-9a-zA-Z]{4,32}$/;
-  return filename_regex.test(filename);
+function validate_filename(filename) {
+    var filename_regex = /^[0-9a-zA-Z]{4,32}$/;
+    return filename_regex.test(filename);
 }
