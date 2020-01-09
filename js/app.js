@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     $('#new_button').on('click', function(){
         $('#filename').html('untitled');
-        $('input.s1').val('');
+        $('input[type=text]').val('');
         $('#files').val('');
     });
 
