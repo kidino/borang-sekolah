@@ -1,0 +1,227 @@
+body * {
+    box-sizing: border-box;
+}
+
+body { 
+    position: relative;
+}
+
+table.borang {
+    font-family: arial;
+    font-size: 10pt;
+    margin: 0px; padding: 0px;
+    width: 700px;
+    margin-top: 50px;
+}
+
+table.borang tr.width-setting, table.borang tr.width-setting td {
+    height: 1px; font-size: 1px; line-height: 1px;
+}
+
+table.borang td {
+    box-sizing: border-box;
+    margin: 0px; height: 22px; vertical-align: middle;
+}
+
+table.borang tr.spacer, table.borang tr.spacer td {
+    height: 3px; margin: 0px; padding: 0px;
+}
+
+table.borang tr.spacer-tall, table.borang tr.spacer-tall td {
+    height: 20px; margin: 0px; padding: 0px;
+}
+
+table.borang tr.page-break, table.borang tr.page-break td {
+    height: 35px; margin: 0px; padding: 0px;
+}
+
+table.borang td.main-label {
+    font-size: 11pt !important; font-weight: bold;
+}
+
+table.borang td.label {
+    font-weight: bold;
+}
+
+table.borang td.num {
+    text-align: right;
+    padding-right: 5px;
+}
+
+table.borang td.center {
+    text-align: center;
+}
+
+table.borang img.logo {
+    width: 100%; height: auto;
+}
+
+table.borang td.box, table.borang td.boxx {
+    border: 1px solid #000000;
+    border-right: none;
+    margin: 0px; padding: 0px;
+}
+
+table.borang td.box.long {
+    width: auto;
+}
+
+
+table.borang td.box.last, table.borang td.boxx.last {
+    border: 1px solid #000000;
+}
+
+table.borang td.helper, table.borang td span.helper {
+    font-style: italic;
+    font-size: 9.5pt !important;
+}
+
+table.borang td.lpad {
+    padding-left: 5px;
+}
+
+
+table.borang td.mid {
+    text-align: center;
+}
+
+table.borang td.vtop {
+    vertical-align: top;
+}
+
+table.borang td.box input, table.borang td.boxx input {
+    border: 0px; width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 12pt;
+}
+
+h3.b2 { width: 700px; }
+
+table.borang2 {
+   width: 700px;
+   font-size: 9pt; 
+   border-right: 1px solid #000;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 10px;
+}
+
+table.borang2 td.box2 {
+    width: 14px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    height: 16px;
+}
+
+table.borang2 td.box2.bot {
+    border-bottom: 1px solid #000;
+}
+
+
+h3 {    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+h4 {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+}
+
+input#tahun2 {
+    width: 150px;
+    border: none;
+    border-bottom: 2px dotted #000;
+    text-align: center;
+    font-size: 14pt;
+}
+
+table.borang3 {
+    margin: 0px; padding: 0px;
+    width: 700px;
+}
+
+table.borang4 {
+    margin: 0px; padding: 0px;
+    width: 340px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+table.borang4 td.box3 {
+    width: 16px; border-top: 1px solid #000; 
+    height: 16px;
+    border-left: 1px solid #000;
+}
+
+table.borang4 tr {
+    height: 5px;
+}
+
+table.borang4 td.box3.last {
+    border-right: 1px solid #000;
+}
+
+table.borang4 td.box3.bot {
+    border-bottom: 1px solid #000;
+}
+
+p.b4 { font-size: 10pt; font-family: Arial, Helvetica, sans-serif; }
+p.b4 input { width: 80px; border:none; border-bottom: 1px dotted #000;}
+p.b5 { font-size: 10pt; font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px; }
+p.b6 { font-size: 8pt; font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px; margin-top: 30px; width: 700px; }
+
+table td.box2 input, table td.box3 input {
+    border: 0px; width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 9pt;
+}
+
+#guide {
+    position: absolute;
+    right: 15px;
+    left: 750px;
+    top: 50px;
+    border: 1px solid #cfcfcf;
+    min-height: 500px; padding: 15px;
+}
+
+#filename {
+    height: 30px; background-color:#fff;
+    width: 200px; float: left; padding: 0px; margin: 0px;
+    line-height: 30px; padding-left: 5px; padding-right: 5px;
+    margin-right: 5px;
+}
+
+#new_button, #save_button, #save_as_button, #print_button, #reset_button {
+    height: 30px; float: left; margin-left: 5px; 
+}
+
+span.divider { border-left: 1px solid #000; height: 30px; float: left ; 
+    width:1px; margin-left: 10px; margin-right: 5px; }
+
+#files {
+    float: right;
+    height: 30px;
+    width: 200px;
+}
+
+#toolbar {
+    position: fixed;
+    top: 0px; right: 0px; left: 0px;
+    height: 40px;
+    background-color: #cfcfcf;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    padding: 5px;
+}
+
+@media print {
+    table.borang {page-break-after: always; margin-top: 0px; }
+    .noprint { display: none !important; }
+}

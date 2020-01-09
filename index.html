@@ -1,0 +1,2831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Borang Sekolah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+    <div id="toolbar" class="noprint">
+        <div id="filename">untitled</div>
+        <button id="new_button">NEW</button>
+        <button id="save_button">SAVE</button>
+        <button id="save_as_button">SAVE AS</button>
+        <span class="divider"></span>
+        <button id="print_button" onclick="window.print()">PRINT</button>
+        <button id="reset_button">RESET</button>
+        <select name="files" id="files">
+            <option value="">[--- load file ---]</option>
+        </select>
+    </div>
+    <div id="guide" class="noprint">
+        <h2>Panduan</h2>
+
+        div#list
+
+    </div>
+    <form id="borang">
+    <table class="borang" cellpadding="0" cellspacing="0" border="0">
+        <tr class="width-setting">
+            <td style="width:25px"></td>
+            <td style="width:25px"></td>
+            <td style="width:200px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+            <td style="width:30px"></td>
+        </tr>
+        <tr>
+            <td colspan="11" class="main-label">BORANG MAKLUMAT MURID<br>
+                MODUL PENGURUSAN MURID, SISTEM PENGURUSAN SEKOLAH<br>
+                KEMENTERIAN PENDIDIKAN MALAYSIA
+            </td>
+            <td class="main-label" colspan="7"><img class="logo" src="img/logo.png" alt=""></td>
+        </tr>
+        <tr class="spacer-tall">
+            <td> </td>
+        </tr>
+        <tr>
+            <td class="num label">A.</td>
+            <td colspan="17" class="label">MAKLUMAT DIRI MURID</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">1.</td>
+            <td>NAMA PENUH</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <!-- <tr>
+            <td> </td>
+            <td class="num">1.</td>
+            <td>NAMA PENUH</td>
+            <td colspan="15" class="boxx" style="border-right: 1px solid #000;">
+                <input type="text" id="test" maxlength="15" style="outline: none; padding-left: 10px; width:100%; text-align: left; background: rgba(0,0,0,0); letter-spacing: 20px; "></td>
+        </tr> -->
+        <tr class="spacer">
+            <td colspan="2" rowspan="2"></td>
+            <td rowspan="2" class="helper vtop">(seperti dalam MyKad/MyKid)</td>
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">2.</td>
+            <td>TARIKH LAHIR</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">/</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">/</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="2" class="vtop mid helper">(hari)</td>
+            <td> </td>
+            <td colspan="2" class="vtop mid helper">(bulan)</td>
+            <td> </td>
+            <td colspan="4" class="vtop mid helper">(tahun)</td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">3.</td>
+            <td>JANTINA</td>
+            <td colspan="2" class="num">Lelaki</td>
+            <td class="box last"></td>
+            <td class="num" colspan="6">Perempuan</td>
+            <td class="box last"></td>
+            <td colspan="5"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">4.</td>
+            <td>NO. MY KAD / MY KID</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">5.</td>
+            <td>NO. SIJIL LAHIR</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">6.</td>
+            <td>NO. PASPORT</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="10"></td>
+            <td colspan="8" class="helper">(Nyatakan Negara Asal)</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">7.</td>
+            <td>KEWARGANEGARAAN</td>
+            <td colspan="5">Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+            <td colspan="8" rowspan="5" class="boxx last"><input type="text"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Bukan Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Pemastautin Tetap</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">8.</td>
+            <td>KAUM / KETURUNAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">9.</td>
+            <td>AGAMA</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">10.</td>
+            <td>BAHASA PERTURURAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="12" class="helper lpad">(Sila rujuk Lampiran A)</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"> </td>
+            <td class="num vtop" rowspan="2" valign="top">11.</td>
+            <td rowspan="2" valign="2" class="vtop">TARIKH MASUK SEKOLAH SEMASA</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">/</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">/</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <!-- <td colspan="3"> </td> -->
+            <td colspan="2" class="vtop mid helper">(hari)</td>
+            <td> </td>
+            <td colspan="2" class="vtop mid helper">(bulan)</td>
+            <td> </td>
+            <td colspan="4" class="vtop mid helper">(tahun)</td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">12.</td>
+            <td>ANAK KE BERAPA</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper"> </td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">13.</td>
+            <td>ALAMAT TETAP</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Poskod</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Bandar</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Negeri</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td rowspan="3"> </td>
+            <td class="num vtop" rowspan="3">14.</td>
+            <td rowspan="3" class="vtop">ALAMAT SURAT MENYURAT</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Poskod</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Bandar</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="helper num">Negeri</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">15.</td>
+            <td>JARAK KE SEKOLAH</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">km </td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">16.</td>
+            <td>MURID TINGGAL DENGAN</td>
+            <td class="boxx last" colspan="15"><input type="text"></td>
+        </tr>
+        <tr class="page-break">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">17.</td>
+            <td>ASRAMA</td>
+            <td class="num">Ya</td>
+            <td class="box last"></td>
+            <td class="num" colspan="4">Tidak</td>
+            <td class="box last"></td>
+            <td colspan="8"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2"></td>
+            <td rowspan="2" class="helper vtop">(Sila rujuk Lampiran A)</td>
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td colspan="2" class="helper">Jika Ya.</td>
+            <td colspan="4" class="num">Jenis Asrama</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="9" class="num">Nama Asrama</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num vtop" rowspan="3">18.</td>
+            <td rowspan="3" class="vtop">MURID BERKEPERLUAN KHAS
+                <br><span class="helper">(Sila rujuk Lampiran A)</span>
+
+            </td>
+            <td class="num">Ya</td>
+            <td class="box last"></td>
+            <td class="num" colspan="4">Tidak</td>
+            <td class="box last"></td>
+            <td colspan="8"></td>
+        </tr>
+        <tr class="spacer">
+            <td></td>
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td colspan="2" class="helper">Jika Ya.</td>
+            <td colspan="4">No. Kad OKU</td>
+            <td class="boxx last" colspan="9"><input type="text"></td>
+
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="4">Program</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="4">Kategori</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="4">Jenis</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="6">Alat Bantuan Teknologi 1</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="5"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="6">Alat Bantuan Teknologi 2</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="5"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="4">Bank</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td colspan="4">No Bank Akaun</td>
+            <td colspan="9" class="boxx last"><input type="text"></td>
+
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="7" class="helper">Adakah terdapat ahli keluarga yang mengalami masalah sama?</td>
+            <td class="box last"></td>
+            <td class="lpad">Ya</td>
+            <td class="box last"></td>
+            <td class="lpad" colspan="6">Tidak</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">19.</td>
+            <td>BANTUAN YANG DITERIMA</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">(Sila rujuk Lampiran A)</td>
+        </tr>
+
+        <tr class="spacer-tall">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td class="num label">B.</td>
+            <td colspan="17" class="label">MAKLUMAT DIRI BAPA / PENJAGA UTAMA</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td class="num">20.</td>
+            <td>NAMA PENUH</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2" rowspan="2"></td>
+            <td rowspan="2" class="helper vtop">(seperti dalam MyKad)</td>
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">21.</td>
+            <td>STATUS BAPA</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">(Sila rujuk Lampiran A) </td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">22.</td>
+            <td>KAUM / KETURUNAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">23.</td>
+            <td>AGAMA</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">24.</td>
+            <td>NO. MY KAD</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">25.</td>
+            <td>NO. PASPORT</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="10"></td>
+            <td colspan="8" class="helper">(Nyatakan Negara Asal)</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">26.</td>
+            <td>KEWARGANEGARAAN</td>
+            <td colspan="5">Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+            <td colspan="8" rowspan="5" class="boxx last"><input type="text"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Bukan Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Pemastautin Tetap</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">27.</td>
+            <td>NO. TELEFON</td>
+            <td colspan="3">Pejabat</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="3">Rumah</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="3">Bimbit</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">28.</td>
+            <td>BILANGAN TANGGUNGAN</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">orang</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">29.</td>
+            <td>PEKERJAAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="12" class="helper lpad">(Sila rujuk Lampiran A)</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Nama Majikan</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Alamat Majikan</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Poskod</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="10"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Bandar</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Negeri</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+
+        <tr class="spacer-tall">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">30.</td>
+            <td>NO. CUKAI PENDAPATAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">31.</td>
+            <td>PENDAPATAN SEBULAN</td>
+            <td>RM</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td></td>
+            <td colspan="6" class="helper">(nyatakan amaun atau tandakan di petak berkenaan)</td>
+            <td colspan="9">Tiada Maklumat Pendapatan</td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td colspan="8"> </td>
+            <td colspan="9">Tiada Pendapatan / Tidak Bekerja</td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer-tall">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td class="num label">C.</td>
+            <td colspan="17" class="label">MAKLUMAT DIRI IBU / PENJAGA KEDUA</td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td class="num">32.</td>
+            <td>NAMA PENUH</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2" rowspan="2"></td>
+            <td rowspan="2" class="helper vtop">(seperti dalam MyKad)</td>
+            <td colspan="15"></td>
+        </tr>
+        <tr>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">33.</td>
+            <td>STATUS IBU</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">(Sila rujuk Lampiran A) </td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">34.</td>
+            <td>KAUM / KETURUNAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">35.</td>
+            <td>AGAMA</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">36.</td>
+            <td>NO. MY KAD</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">37.</td>
+            <td>NO. PASPORT</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="10"></td>
+            <td colspan="8" class="helper">(Nyatakan Negara Asal)</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">38.</td>
+            <td>KEWARGANEGARAAN</td>
+            <td colspan="5">Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+            <td colspan="8" rowspan="5" class="boxx last"><input type="text"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Bukan Warganegara</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="5">Pemastautin Tetap</td>
+            <td class="box last"></td>
+            <td></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">39.</td>
+            <td>NO. TELEFON</td>
+            <td colspan="3">Pejabat</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="3">Rumah</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="3">Bimbit</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td class="center">-</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">40.</td>
+            <td>BILANGAN TANGGUNGAN</td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="13" class="helper lpad">orang</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">41.</td>
+            <td>PEKERJAAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="12" class="helper lpad">(Sila rujuk Lampiran A)</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Nama Majikan</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Alamat Majikan</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Poskod</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="10"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Bandar</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="2"> </td>
+            <td class="num helper">Negeri</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td colspan="3"> </td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">42.</td>
+            <td>NO. CUKAI PENDAPATAN</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td class="num">43.</td>
+            <td>PENDAPATAN SEBULAN</td>
+            <td>RM</td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box"></td>
+            <td class="box last"></td>
+            <td colspan="7"></td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td></td>
+            <td colspan="6" class="helper">(nyatakan amaun atau tandakan di petak berkenaan)</td>
+            <td colspan="9">Tiada Maklumat Pendapatan</td>
+            <td class="box last"></td>
+        </tr>
+
+        <tr class="spacer">
+            <td colspan="18"></td>
+        </tr>
+
+        <tr>
+            <td colspan="8"> </td>
+            <td colspan="9">Tiada Pendapatan / Tidak Bekerja</td>
+            <td class="box last"></td>
+        </tr>
+
+    </table>
+
+    <!-- BORANG KE DUA -->
+
+    <h3 class="b2">BORANG PENGAKUAN PENDAPATAN<br>
+        (Bagi Ibu / Bapa/ Penjaga Yang Tiada Penyata Gaji / Tiada Pendapatan)<br>
+        UNTUK TAHUN <input type="text" id="tahun2"><br>(Diisi oleh ibu / bapa / penjaga)</h3>
+
+    <h4>1. &nbsp; &nbsp; MAKLUMAT MURID</h4>
+
+    <table class="borang2" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="label2">(a) Nama Murid</td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+        </tr>
+        <tr>
+            <td class="label2"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+        </tr>
+    </table>
+    <table class="borang2" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+            <td class="label2">(b) Tahun/Tingkatan</td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+        </tr>
+
+    </table>
+    <table class="borang2" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="label2">(c) Nama Sekolah</td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+            <td class="box2"></td>
+        </tr>
+        <tr>
+            <td class="label2"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+        </tr>
+    </table>
+
+    <table class="borang2" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+            <td class="label2">(d) Hubungan dengan murid</td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+            <td class="box2 bot"></td>
+        </tr>
+
+    </table>
+
+
+    <table cellspacing="0" cellpadding="0" border="0" class="borang3">
+
+        <tr>
+            <!-- column 1-->
+            <td style="width:340px; vertical-align: top;">
+                <h4>2. &nbsp; &nbsp; MAKLUMAT BAPA / PENJAGA</h4>
+
+                <table cellpadding="0" cellspacing="0" border="0" class="borang4">
+                    <tr>
+                        <td>(a) Nama:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(b) No K/P:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+                    <tr>
+                        <td>(c) Alamat:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(d) Telefon:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(e) Pekerjaan:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="3">(i) Aktiviti Pekerjaan:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td rowspan="2" colspan="2">(g) Purata Pendapatan Sebulan:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="13"></td>
+                    </tr>
+                </table>
+
+            </td>
+            <!-- /end of column 1-->
+
+            <td style="width: 20px;"></td>
+            <!-- column 2-->
+            <td style="width:340px; vertical-align: top;">
+                <h4>3. &nbsp; &nbsp; MAKLUMAT IBU / ISTERI / PENJAGA</h4>
+
+                <table cellpadding="0" cellspacing="0" border="0" class="borang4">
+                    <tr>
+                        <td>(a) Nama:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(b) No K/P:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+                    <tr>
+                        <td>(c) Alamat:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(d) Telefon:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>(e) Pekerjaan:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="3">(i) Aktiviti Pekerjaan:</td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"> </td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3"></td>
+                        <td class="box3 last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"> </td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td rowspan="2" colspan="2">(g) Purata Pendapatan Sebulan:</td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot"></td>
+                        <td class="box3 bot last"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="13"></td>
+                    </tr>
+                </table>
+
+            </td>
+            <!-- /end of column 2-->
+
+        </tr>
+
+    </table>
+
+    <p class="b4">4. &nbsp; &nbsp; Dengan ini kami mengaku bahawa pendapatan purata bersama adalah sebanyak RM <input
+            type="text" id="pendapatan"> sebulan.</p>
+
+    <table celpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td style="width:330px;">
+                <p style="border-bottom: 1px dotted #000;  margin-bottom: 0px;  margin-top: 20px; "></p>
+                <p class="b5">(Tandatangan Bapa / Penjaga)</p>
+                <p class="b5">Nama:</p>
+                <p class="b5">Tarikh:</p>
+            </td>
+            <td style="width:40px;"></td>
+            <td style="width:330px;">
+                <p style="border-bottom: 1px dotted #000; margin-bottom: 0px;  margin-top: 20px;"></p>
+                <p class="b5">(Tandatangan Ibu / Penjaga)</p>
+                <p class="b5">Nama:</p>
+                <p class="b5">Tarikh:</p>
+
+            </td>
+        </tr>
+    </table>
+    </form>
+
+    <p class="b4">Saya mengesahkan maklumat mengenai jumlah pendapatan dan bilangan tanggungan yang dinyatakan adalah
+        benar.</p>
+    <p style="margin-top: 30px; margin-bottom: 0px;"><span
+            style="display: inline-block; width: 300px; border-bottom: 1px dotted #000;"></span></p>
+    <p class="b4">(Tandatangan dan Cop Rasmi)</p>
+
+    <table cellpadding="0" cellspacing="0" border="0"
+        style="width: 700px; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;">
+        <tr style="height:20px;">
+            <td style="width:100px;">Nama:</td>
+            <td style="width:250px; border-bottom:1px dotted #000;"></td>
+            <td style="width: 40px;"></td>
+            <td style="width:100px"> No. K/P:</td>
+            <td style="width: 210px; border-bottom: 1px dotted #000;"></td>
+        </tr>
+        <tr style="height:20px;">
+            <td style="width:100px;">Jawatan:</td>
+            <td style="width:250px; border-bottom:1px dotted #000;"></td>
+            <td style="width: 40px;"></td>
+            <td style="width:100px"> Tarikh:</td>
+            <td style="width: 210px; border-bottom: 1px dotted #000;"></td>
+        </tr>
+
+    </table>
+
+    <p class="b6">Pengesahan hendaklah dilakukan oleh Pegawai Kerajaan Kumpulan A ( Pengurusan dan Profesional) /
+        Pengerusi JKKK / Penyelia Pembangunan Mukim / Penghulu /
+        Ketua kampung dan yang setaraf dengannya berdasarkan Pengakuan Pendapatan yang disertakan bersama. </p>
+
+
+</body>
+
+</html>
